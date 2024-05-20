@@ -1,0 +1,112 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+:root {
+	--violet: hsl(257, 40%, 49%);
+	--soft-magenta: hsl(300, 69%, 71%);
+	--white: hsl(100, 100%, 100%);
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	min-width: 320px;
+	row-gap: 30px;
+	padding: 30px;
+	color: var(--white);
+	background: url(images/bg-mobile.svg) no-repeat var(--violet);
+}
+main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	row-gap: 40px;
+}
+header > img {
+	width: 10em
+}
+.img-section > img{
+	display: block;
+	width: 100%;
+}
+.huddle-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 20px;
+	text-align: center;
+}
+.huddle-info > h1 {
+	font-family: Poppins, sans-serif;
+	font-weight: 600;
+}
+.huddle-info > a {
+	font-family: Poppins;
+	font-weight: 400;
+	background-color: var(--white);
+	color: var(--violet);
+	text-decoration: none;
+	padding: 15px 80px;
+	box-shadow: 0px 5px 10px 0 hsla(0, 0%, 0%, 0.4);
+	border-radius: 25px;
+	transition: ease-in 0.2s;
+}
+.huddle-info > a:hover {
+	background-color: var(--soft-magenta);
+	color: var(--white);
+}
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 15px;
+}
+footer a {
+	border: 1px solid var(--white);
+	padding: 7px;
+	border-radius: 50%;
+	transition: ease-in 0.2s
+}
+footer i {
+	font-size: 1em;
+	color: var(--white);
+	transition: ease-in 0.2s
+}
+footer a:hover {
+	border-color: var(--soft-magenta);
+}
+footer a:hover i {
+	color: var(--soft-magenta);
+}
+
+/*RESPONSIVE*/
+@media (min-width: 992px) {
+	body {
+		padding: 20px 50px;
+		background: url(images/bg-desktop.svg) var(--violet) no-repeat;
+	}
+	main {
+		flex-direction: row;
+		column-gap: 30px;
+	}
+	.huddle-info {
+		flex-shrink: 2;
+	}
+	.huddle-info > p,
+	.huddle-info > h1 {
+		text-align: left;
+	}
+	.huddle-info > h1 {
+		font-size: 2em;
+	}
+	.huddle-info > a {
+		align-self: flex-start;
+	}
+	footer {
+		justify-content: flex-end;
+	}
+}
